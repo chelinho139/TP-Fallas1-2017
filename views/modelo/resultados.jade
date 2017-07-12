@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    .page-header
+        h2 Resultados
+    .row
+        .col-md-11.col-centered
+            - for (var i = 0; i < resultados.length; i++)
+                .list-group(id = "resultado_#{i}")
+                    .list-group-item
+                        h4.list-group-item-heading= resultados[i].titulo
+                        br
+                        p.list-group-item-text !{resultados[i].descripcion}

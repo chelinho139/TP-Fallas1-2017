@@ -1,0 +1,153 @@
+define Result {
+    plas : null,
+    pres : null,
+    skin : null,
+    mass : null,
+    pedi : null,
+    age : null,
+    preg : null
+}
+
+rule R0 {
+    when {
+        r: Result (r.plas == 'plas2');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R1 {
+    when {
+        r: Result (r.plas == 'plas1' && r.pres=='pres1');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R2 {
+    when {
+        r: Result (r.plas == 'plas1' && r.mass=='mass1');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R3 {
+    when {
+        r: Result (r.mass == 'mass2');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R4 {
+    when {
+        r: Result (r.pedi == 'pedi2');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R5 {
+    when {
+        r: Result (r.plas=='plas1' && r.pedi == 'pedi1');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R6 {
+    when {
+        r: Result (r.pres=='pres2' && r.mass == 'mass1');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R7 {
+    when {
+        r: Result (r.skin=='skin2' && r.age == 'age1');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R8 {
+    when {
+        r: Result (r.plas=='plas0');
+    } then {
+        emit('DIABNO');
+    }
+}
+
+rule R9 {
+    when {
+        r: Result (r.pres=='pres2');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R10 {
+    when {
+        r: Result (r.plas=='plas1' && r.age=='age0');
+    } then {
+        emit('DIABNO');
+    }
+}
+
+rule R11 {
+    when {
+        r: Result (r.preg=='preg1' && r.mass=='mass0');
+    } then {
+        emit('DIABNO');
+    }
+}
+
+rule R12 {
+    when {
+        r: Result (r.preg=='preg1' && r.skin=='skin2');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R13 {
+    when {
+        r: Result (r.plas=='plas1' && r.skin=='skin1' && r.pedi=='pedi0');
+    } then {
+        emit('DIABNO');
+    }
+}
+
+rule R14 {
+    when {
+        r: Result (r.mass=='mass0' && r.age=='age1');
+    } then {
+        emit('DIABNO');
+    }
+}
+
+rule R15 {
+    when {
+        r: Result (r.preg=='preg0' && r.mass=='mass0');
+    } then {
+        emit('DIABNO');
+    }
+}
+
+rule R16 {
+    when {
+        r: Result (r.mass=='mass1' && r.pedi=='pedi2');
+    } then {
+        emit('DIABSI');
+    }
+}
+
+rule R17 {
+    when {
+        r: Result (r.plas=='plas1' && r.pedi=='pedi0');
+    } then {
+        emit('DIABNO');
+    }
+}

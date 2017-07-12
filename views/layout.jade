@@ -1,0 +1,33 @@
+!!! 5
+html
+    block vars
+    head
+        title #{pageTitle}
+        script(type='text/javascript', src='/vendor/jquery-1.11.3.min.js')
+        link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/style.css')
+        script(type='text/javascript', src='/vendor/bootstrap/js/bootstrap.min.js')
+        script(type='text/javascript', src='/vendor/bootstrap/js/holder.js')
+        block head
+    body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/') #{appName}
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href='/comenzar') Hacer test
+                        li
+                            a(href='/preguntas') Preguntas
+                        // li
+                            a(href='/resultados') Resultados
+        br
+        br
+        div.container
+            block content
+        block scripts
