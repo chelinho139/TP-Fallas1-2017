@@ -23,14 +23,15 @@ module.exports = function (app, log) {
   var Result = resultsFlow.getDefined("result");
 
   app.get('/', function (req, res) {
-    res.render('home/home', {
-      appName: "75.67",
-      pageTitle: "75.67 - Sistemas Automáticos de Diagnóstico y Detección de Fallas I"
-    });
+    res.render('index');
+    // res.render('home/home', {
+    //   appName: "75.67",
+    //   pageTitle: "75.67 - Sistemas Automáticos de Diagnóstico y Detección de Fallas I"
+    // });
   });
 
   app.get('/resultados', function (req, res) {
-    res.render('modelo/resultados', {
+    res.render('modelo/resultados.jade', {
       appName: "75.67",
       pageTitle: "75.67 - Resultados",
       resultados: Resultados
@@ -38,7 +39,7 @@ module.exports = function (app, log) {
   });
 
   app.get('/preguntas', function (req, res) {
-    res.render('modelo/preguntas', {
+    res.render('modelo/preguntas.jade', {
       appName: "75.67",
       pageTitle: "75.67 - Preguntas",
       preguntas: Preguntas
@@ -47,7 +48,7 @@ module.exports = function (app, log) {
 
   app.get('/comenzar', function (req, res) {
     req.session.test = new TestModel();
-    res.render('analisis/comenzar', {
+    res.render('analisis/comenzar.jade', {
       appName: "75.67",
       pageTitle: "75.67 - Sistemas Automáticos de Diagnóstico y Detección de Fallas I"
     });
@@ -55,7 +56,7 @@ module.exports = function (app, log) {
 
   app.get('/analisis', function (req, res) {
     var pregunta = new Pregunta(0);
-    res.render('analisis/analisis', {
+    res.render('analisis/analisis.jade', {
       appName: "75.67",
       pageTitle: "75.67 - Análisis",
       pregunta: pregunta
@@ -102,7 +103,7 @@ module.exports = function (app, log) {
         resultado = Resultados[1];
       }
 
-      res.render('analisis/resultado', {
+      res.render('analisis/resultado.jade', {
         appName: "75.67",
         pageTitle: "75.67 - Resultado",
         resultado: resultado
@@ -132,7 +133,7 @@ module.exports = function (app, log) {
       var siguiente = pregunta.siguiente();
       if (siguiente) {
         log.info("Siguiente pregunta: " + JSON.stringify(siguiente));
-        res.render('analisis/analisis', {
+        res.render('analisis/analisis.jade', {
           appName: "75.67",
           pageTitle: "75.67 - Hacer test",
           pregunta: siguiente
