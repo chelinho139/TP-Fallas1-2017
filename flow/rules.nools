@@ -7,10 +7,123 @@ define Result {
 
 rule R0 {
     when {
-        r: Result (r.carga == 'carga6');
+        r: Result (r.carga == 'carga5');
     } then {
         emit('ROJO');
     }
 }
+
+
+rule R1 {
+    when {
+        r: Result (r.carga == 'carga0');
+    } then {
+        emit('VERDE');
+    }
+}
+
+
+rule R2 {
+    when {
+        r: Result (r.carga == 'carga1' && r.entrenado == 'entrenado0' && r.edad == 'edad0');
+    } then {
+        emit('VERDE');
+    }
+}
+
+rule R3 {
+    when {
+        r: Result (r.carga == 'carga2' && r.entrenado == 'entrenado0' && r.edad == 'edad0');
+    } then {
+        emit('VERDEAM');
+    }
+}
+
+rule R4 {
+    when {
+        r: Result (r.carga == 'carga3' && r.entrenado == 'entrenado0' && r.edad == 'edad0');
+    } then {
+        emit('AMARILLO');
+    }
+}
+
+rule R5 {
+    when {
+        r: Result (r.carga == 'carga4' && r.entrenado == 'entrenado0' && r.edad == 'edad0');
+    } then {
+        emit('ROJOAM');
+    }
+}
+
+rule R6 {
+    when {
+        r: Result (r.carga == 'carga1' && r.edad == 'edad0');
+    } then {
+        emit('VERDE');
+    }
+}
+
+rule R7 {
+    when {
+        r: Result (r.carga == 'carga2' && r.edad == 'edad0');
+    } then {
+        emit('AMARILLO');
+    }
+}
+
+rule R8 {
+    when {
+        r: Result (r.carga == 'carga3' && r.edad == 'edad0');
+    } then {
+        emit('ROJOAM');
+    }
+}
+
+rule R9 {
+    when {
+        r: Result (r.carga == 'carga4' && r.edad == 'edad0');
+    } then {
+        emit('ROJOAM');
+    }
+}
+
+rule R10 {
+    when {
+        r: Result (r.carga == 'carga1' && r.edad == 'edad1');
+    } then {
+        emit('VERDEAM');
+    }
+}
+
+rule R11 {
+    when {
+        r: Result (r.carga == 'carga2' && r.edad == 'edad1');
+    } then {
+        emit('ROJOAM');
+    }
+}
+
+rule R12 {
+    when {
+        r: Result (r.carga == 'carga3' && r.edad == 'edad1');
+    } then {
+        emit('ROJO');
+    }
+}
+
+rule R13 {
+    when {
+        r: Result (r.carga == 'carga4' && r.edad == 'edad1');
+    } then {
+        emit('ROJO');
+    }
+}
+
+        
+
+
+
+
+
 
 

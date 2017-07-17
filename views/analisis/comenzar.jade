@@ -1,12 +1,13 @@
 extends ../layout
 
 block content
-    .jumbotron
-        .container(style="text-align: center;")
-            h2 Herramienta de apoyo o ayuda para facilitar el diagnóstico de la diabetes.
-            br
-            p
-              | A continuación podrá ingresar el resultado de los estudios preliminares para que la información sea analizada y así obtener un diagnóstico.
-            br
-            p
-                a.btn.btn-primary.btn-lg(href="/analisis") Comenzar »
+    .container
+            .jumbotron.col-md-8
+                .container
+                    h2 Cuestionario
+                    br
+                    p
+                      | A continuación se realizaran varias preguntas para analizar la situacion y dar un resultado especifico utilizando un motor de inferencia.
+                    br
+                    p
+                        a.btn.btn-success.btn-lg(href="/analisis") Siguiente

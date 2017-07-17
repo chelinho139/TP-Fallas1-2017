@@ -3,27 +3,25 @@ var preguntas = [
         pregunta: "Peso Carga",
         descripcion: "Ingrese la carga del puesto (Kg.): ",
         respuestas : [
-            "0 - 10",
-            "10 - 15",
-            "15 - 20",
-            "20 - 25",
-            "25 - 35",
-            "35 - 40",
-            "40+"
+            "0 - 15 kg",
+            "15 - 20 kg",
+            "20 - 25 kg",
+            "25 - 35 kg",
+            "35 - 40 kg",
+            "40+ kg"
         ]
     },
     {
         pregunta: "Edad",
-        descripcion: "Presión más baja medida en las arterias; se produce cuando el músculo cardíaco está relajado entre latidos. Medida en  mmHg",
+        descripcion: "Seleccione la edad del trabajador",
         respuestas : [
-            "18 - 27",
-            "27 - 35",
-            "45 - 60"
+            "Joven: 18 a 32",
+            "Mayor: 33+"
         ]
     },
     {
         pregunta: "Estado Fisico",
-        descripcion: "El empleado realiza entrenamiento fisico (gimnasio, correr, deporte)",
+        descripcion: "El empleado realiza entrenamiento fisico (gimnasio, correr, deporte)?",
         respuestas : [
             "Si",
             "No",
@@ -35,24 +33,35 @@ var preguntas = [
 var resultados = [
     {
       id: 0,
-      titulo: "Verde probabilidad de portar la enfermedad diabetes",
-      descripcion: "ASDísticas inherentes a su persona se considera baja la probabilidad de poseer la enfermedad"
+      color: "#4CAF50",
+      titulo: "Puesto Verde",
+      descripcion: "Conclusion: Dadas las caracteristicas del trabajador y del puesto, se concluye que no se produciran lesiones."
     },
     {
       id: 1,
-      titulo: "Verde marillo de existencia de la enfermedad",
-      descripcion: "ASDDAS sus antecedentes familiares y estudios, presenta posibilidades de estar en un grupo de riesgo. Se recomienda consultar un especialista y realizar seguimiento periódico."
+      color: "#cddc39",
+      titulo: "Puesto Verde Amarillo",
+      descripcion: "Conclusion: Dadas las caracteristicas del trabajador y del puesto, se concluye que pueden producirse lesiones a largo plazo."
+    },
+
+           {
+      id: 2,
+      color: "#ffeb3b",
+      titulo: "Puesto Amarillo",
+      descripcion: "Conclusion: Dadas las caracteristicas del trabajador y del puesto, se concluye que se produiran lesiones a largo plazo."
     },
         {
-      id: 2,
-      titulo: "Amirllo Rojo",
-      descripcion: "DDA sus antecedentes familiares y estudios, presenta posibilidades de estar en un grupo de riesgo. Se recomienda consultar un especialista y realizar seguimiento periódico."
+      id: 3,
+      color: "#ff9800",
+      titulo: "Puesto Rojo Amarillo",
+      descripcion: "Conclusion: Dadas las caracteristicas del trabajador y del puesto, se concluye que se produciran lesiones a largo plazo y pueden producirse lesiones a corto plazo."
     },
 
         {
-      id: 3,
-      titulo: "Rojo",
-      descripcion: "DadRRRos sus antecedentes familiares y estudios, presenta posibilidades de estar en un grupo de riesgo. Se recomienda consultar un especialista y realizar seguimiento periódico."
+      id: 4,
+      color: "#f44336",
+      titulo: "Puesto Rojo",
+      descripcion: "Conclusion: Dadas las caracteristicas del trabajador y del puesto, se concluye que se produciran lesiones a corto plazo."
     }
 
 

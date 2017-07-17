@@ -52,14 +52,6 @@ rule Q1A6 {
     }
 }
 
-rule Q1A7 {
-    when {
-        q: Question (q.id == 0 && q.ans == 6);
-    } then {
-        emit('carga','carga6');
-    }
-}
-
 
 rule Q2A1 { 
     when {
@@ -74,14 +66,6 @@ rule Q2A2 {
         q: Question (q.id == 1 && q.ans == 1);
     } then {
         emit('edad', 'edad1');
-    }
-}
-
-rule Q2A3 { 
-    when {
-        q: Question (q.id == 1 && q.ans == 2);
-    } then {
-        emit('edad', 'edad2');
     }
 }
 
