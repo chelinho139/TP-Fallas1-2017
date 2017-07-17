@@ -6,14 +6,14 @@ block content
         .jumbotron.col-md-8
             .row
                 .page-header
-                    .col-md-6
+                    .col-md-8(style="background-color:#{resultado.color};")
                         h2 #{resultado.titulo}
-                    .col-md-4   
-                        btn.btn-lg(style="background-color:#{resultado.color}; display: block;margin-top: 15px;width:50%;") Puesto
-
+            br
+            br
             .row
                     .col-md-12.col-centered
                         p #{resultado.descripcion}
+                        br
                         a.btn.btn-primary.btn-lg(, href="/") OK
 
                     

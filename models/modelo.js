@@ -1,7 +1,7 @@
 var preguntas = [
     {
         pregunta: "Peso Carga",
-        descripcion: "Ingrese la carga del puesto (Kg.): ",
+        descripcion: "Ingrese la carga del puesto: ",
         respuestas : [
             "0 - 15 kg",
             "15 - 20 kg",
@@ -13,7 +13,7 @@ var preguntas = [
     },
     {
         pregunta: "Edad",
-        descripcion: "Seleccione la edad del trabajador",
+        descripcion: "Seleccione la edad del trabajador:",
         respuestas : [
             "Joven: 18 a 32",
             "Mayor: 33+"
@@ -21,7 +21,7 @@ var preguntas = [
     },
     {
         pregunta: "Estado Fisico",
-        descripcion: "El empleado realiza entrenamiento fisico (gimnasio, correr, deporte)?",
+        descripcion: "El empleado esta entrenado fisicamente(gimnasio, deportes)?",
         respuestas : [
             "Si",
             "No",

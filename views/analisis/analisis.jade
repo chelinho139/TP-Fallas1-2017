@@ -2,7 +2,7 @@ extends ../layout
 
 block content
     .col-md-4
-        h3 #{pregunta.pregunta}
+        h5 #{pregunta.pregunta}
         p !{pregunta.descripcion}
         form(role="form", method="post")
             input(type="hidden", name="pregunta", value="#{pregunta.id}")
@@ -10,5 +10,5 @@ block content
                 .list-group
                     a.list-group-item(href="#",for="respuesta_#{i}")
                         input(type="radio", name="respuesta", value="#{i}", id="respuesta_#{i}", required)
-                        label(href="#",for="respuesta_#{i}") #{pregunta.respuestas[i]}
+                        label(for="respuesta_#{i}") #{pregunta.respuestas[i]}
             button.btn.btn-lg.btn-success Siguiente
